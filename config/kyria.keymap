@@ -13,6 +13,11 @@
 #define RAISE   2
 #define ADJUST  3
 
+#define BT_CLR BT_CLR_CMD 0
+#define BT_PRV BT_PRV_CMD 0
+#define BT_NXT BT_NXT_CMD 0
+#define BT_SEL BT_SEL_CMD
+
 &mt {
 tapping_term_ms = <175>;
 flavor = "tap-preferred";
