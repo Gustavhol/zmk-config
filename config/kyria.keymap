@@ -44,7 +44,7 @@ flavor = "tap-preferred";
 	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp BSLH
 	&kp TAB  &mt LSFT A &mt LCTL S &mt LALT D &mt LGUI F &kp G                      &kp H &mt LGUI J  &mt LALT K &mt LCTL L  &mt LSFT SCLN &kp QUOT
 	&kp LSFT &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp CMMA &kp DOT &kp FSLH &kp RCTL
-	              &kp LGUI &kp DEL &kp RET &lt LOWER BKSP &lt LOWER SPC            &lt RAISE RET  &lt RAISE RET  &kp TAB &kp BKSP &kp RALT
+	              &bt BT_CLR_CMD 0 &bt BT_PRV &bt BT_NXT &lt LOWER BKSP &lt LOWER SPC            &lt RAISE RET  &lt RAISE RET  &bt BT_NXT_CMD 0 &kp BKSP &kp RALT
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
