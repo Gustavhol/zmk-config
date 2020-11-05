@@ -23,25 +23,25 @@
 
 
 /* / { */
+/*     behaviors { */
+/*         &lt { */
+/*             tapping_term_ms = <200>; */
+/*             flavor = "tap-preferred"; */
+/*         }; */
+/*         hm: homerow_mods { */
+/*             compatible = "zmk,behavior-hold-tap"; */
+/*             label = "homerow mods"; */
+/*             #binding-cells = <2>; */
+/*             tapping_term_ms = <200>; */
+/*             flavor = "tap-preferred"; */
+/*             bindings = <&kp>, <&kp>; */
+/*         }; */
+/*     }; */
 /* }; */
 
 
 / {
 
-    behaviors {
-        /* &lt { */
-        /*     tapping_term_ms = <200>; */
-        /*     flavor = "tap-preferred"; */
-        /* }; */
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
 
 	keymap {
 		compatible = "zmk,keymap";
