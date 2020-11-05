@@ -15,6 +15,7 @@
 /* Å */
 #define SE_ARING LBRC
 #define SE_AA SE_ARING
+#define SE_AAA LBKT
 /*¨*/
 #define SE_DIAE RBRC
 /*Ö*/
