@@ -21,7 +21,7 @@
 #define BT_SEL BT_SEL_CMD
 
 
-lt {
+&lt {
     tapping_term_ms = <200>;
     flavor = "tap-preferred";
    };
