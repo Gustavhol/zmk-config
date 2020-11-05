@@ -54,7 +54,7 @@
 			bindings = <
 	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_AA
 	&kp TAB  &mt LSFT A &mt LCTL S &mt LALT D &mt LGUI F &kp G                      &kp H &mt LGUI J  &mt LALT K &mt LCTL L  &mt LSFT SE_OE &kp SE_AE
-	&kp LG(LC(X)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LSLS(CMMA) &kp DEL
+	&kp LG(LC(X)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LS(CMMA) &kp DEL
 	              &trans &trans &trans &lt LOWER BKSP &lt LOWER SPC            &lt RAISE RET  &lt RAISE RET  &trans &trans &trans
 			>;
 
@@ -76,8 +76,8 @@
 
 		raise_layer {
 			bindings = <
-	&trans        &kp SE_UNDS &kp SE_AMPR &kp SE_GRV  &kp SE_LCBR &kp SE_RCBR                                        &kp SE_LT   &kp SE_GT   &kp SE_EQL  &kp SE_PLUS &trans      &trans
-	&trans        &kp SE_MINS &kp SE_APOS &kp SE_QUOT &kp SE_LPRN &kp SE_RPRN                                        &kp SE_LBRC &kp SE_RBRC &kp SE_COLN &kp SE_SLSH &kp SE_AT   &trans
+	&trans        &kp SE_UNDS &kp SE_AMPR &kp SE_GRV  &kp SE_LCBR &kp SE_RCBR                                        &kp SE_LT   &kp SE_GT   &kp SE_EQL &kp SE_PLUS &trans      &trans
+	&trans        &kp SE_MINS &kp SE_QUOT &kp SE_DQUO &kp SE_LPRN &kp SE_RPRN                                        &kp SE_LBRC &kp SE_RBRC &kp SE_CLN &kp SE_SLSH &kp SE_AT   &trans
 	&kp LG(LC(M)) &kp SE_CIRC &kp SE_BSLS &kp SE_ASTR &kp SE_EXLM &kp SE_HASH &mo ADJ &mo ADJ          &trans &trans &kp SE_PIPE &kp SE_QUES &kp SE_DLR &kp SE_PERC &kp SE_TILD &kp RCTL
 	                                      &trans      &trans      &trans      &mo ADJ &mo ADJ          &trans &trans &trans      &kp trans   &trans
 			>;
