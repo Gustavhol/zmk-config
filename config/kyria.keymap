@@ -53,7 +53,7 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_DIAE
+	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_ARING
 	&kp TAB  &hm LSFT A &hm LCTL S &hm LALT D &hm LGUI F &kp G                      &kp H &hm LGUI J  &hm LALT K &hm LCTL L  &hm LSFT SE_OE &kp SE_AE
 	&kp LG(LC(X)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LS(CMMA) &kp DEL
 	              &trans &trans &trans &lt LOWER BKSP &lt LOWER SPC            &lt RAISE RET  &lt RAISE RET  &trans &trans &trans
