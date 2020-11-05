@@ -22,7 +22,12 @@
 
 
 
+/* / { */
+/* }; */
+
+
 / {
+
     behaviors {
         /* &lt { */
         /*     tapping_term_ms = <200>; */
@@ -37,11 +42,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-};
-
-
-/ {
-
 
 	keymap {
 		compatible = "zmk,keymap";
