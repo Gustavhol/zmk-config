@@ -21,13 +21,13 @@
 #define BT_SEL BT_SEL_CMD
 
 
-&lt {
-    tapping_term_ms = <200>;
-    flavor = "tap-preferred";
-   };
 
 / {
     behaviors {
+        &lt {
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
