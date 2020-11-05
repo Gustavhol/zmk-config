@@ -58,7 +58,7 @@
 /***/
 #define SE_ASTR LS(SE_QUOT)
 /*>*/
-#define SE_RABK LS(LT)
+#define SE_RABK LS(SE_LT)
 #define SE_GT SE_RABK
 /*_*/
 #define SE_UNDS LS(SE_MINS)
