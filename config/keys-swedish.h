@@ -13,9 +13,8 @@
 /*´*/
 #define SE_ACUT EQUAL
 /* Å */
-#define SE_ARING LBRC
+#define SE_ARING LBKT
 #define SE_AA SE_ARING
-#define SE_AAA LBKT
 /*¨*/
 #define SE_DIAE RBRC
 /*Ö*/

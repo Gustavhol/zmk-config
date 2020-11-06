@@ -15,7 +15,8 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define ADJ  3
+#define NAV     3
+#define ADJ     4
 
 
         &lt {
@@ -32,7 +33,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
+            tapping_term_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -53,10 +54,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_AAA
+	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_AA
 	&kp TAB  &hm LSFT A &hm LCTL S &hm LALT D &hm LGUI F &kp G                      &kp H &hm LGUI J  &hm LALT K &hm LCTL L  &hm LSFT SE_OE &kp SE_AE
 	&kp LG(LC(A)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LS(CMMA) &kp DEL
-	              &trans &trans &trans &lt LOWER BKSP &lt LOWER SPC            &lt RAISE RET  &lt RAISE RET  &trans &trans &trans
+	              &none &none &none &lt LOWER BKSP &lt LOWER SPC            &lt RAISE RET  &lt RAISE RET  &mo NAV &none &mo ADJ
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
@@ -67,8 +68,8 @@
 			bindings = <
 	&bt BT_CLR &bt BT_PRV &bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2                                &trans &kp N7  &kp N8    &kp N9   &trans &out OUT_TOG
 	&kp F1     &kp F2     &kp F3     &kp F4       &kp F5       &kp F6                                      &trans &kp N4  &kp N5    &kp N6   &trans &out OUT_BLE
-	&kp F7     &kp F8     &kp F9     &kp F10      &kp F11      &kp F12 &trans &trans     &mo ADJ  &mo ADJ  &kp N0 &kp N1  &kp N2    &kp N3   &trans &out OUT_USB
-	                                 &trans       &trans       &trans  &trans &trans     &mo ADJ  &mo ADJ  &trans &trans  &trans
+	&kp F7     &kp F8     &kp F9     &kp F10      &kp F11      &kp F12 &trans &trans     &trans  &trans  &kp N0 &kp N1  &kp N2    &kp N3   &trans &out OUT_USB
+	                                 &trans       &trans       &trans  &trans &trans     &trans  &trans  &trans &trans  &trans
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
@@ -79,8 +80,20 @@
 			bindings = <
 	&trans        &kp SE_UNDS &kp SE_AMPR &kp SE_GRV  &kp SE_LCBR &kp SE_RCBR                                        &kp SE_LT   &kp SE_GT   &kp SE_EQL &kp SE_PLUS &trans      &trans
 	&trans        &kp SE_MINS &kp SE_QUOT &kp SE_DQUO &kp SE_LPRN &kp SE_RPRN                                        &kp SE_LBRC &kp SE_RBRC &kp SE_CLN &kp SE_SLSH &kp SE_AT   &trans
-	&kp LG(LC(M)) &kp SE_CIRC &kp SE_BSLS &kp SE_ASTR &kp SE_EXLM &kp SE_HASH &mo ADJ &mo ADJ          &trans &trans &kp SE_PIPE &kp SE_QUES &kp SE_DLR &kp SE_PERC &kp SE_TILD &kp RCTL
-	                                      &trans      &trans      &trans      &mo ADJ &mo ADJ          &trans &trans &trans      &trans      &trans
+	&kp LG(LC(M)) &kp SE_CIRC &kp SE_BSLS &kp SE_ASTR &kp SE_EXLM &kp SE_HASH &trans &trans          &trans &trans &kp SE_PIPE &kp SE_QUES &kp SE_DLR &kp SE_PERC &kp SE_TILD &kp RCTL
+	                                      &trans      &trans      &trans      &trans &trans          &trans &trans &trans      &trans      &trans
+			>;
+
+			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
+		};
+
+
+		nav_layer {
+			bindings = <
+	&trans     &trans     &trans     &trans       &trans       &trans                                     &kp HOME &kp PGDN &kp PGUP &kp END   &trans &ext_power EP_OFF
+    &trans     &trans     &trans     &trans       &trans       &trans                                     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &ext_power EP_ON
+    &trans     &trans     &trans     &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans   &trans    &trans &ext_power EP_TOG
+	                                 &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
@@ -89,10 +102,10 @@
 
 		adj_layer {
 			bindings = <
-	&bt BT_CLR &bt BT_PRV &bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2                               &kp HOME &kp PGDN &kp PGUP &kp END   &trans &ext_power EP_OFF
-    &trans     &trans     &trans     &trans       &trans       &trans                                     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &ext_power EP_ON
-    &trans     &trans     &trans     &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans   &trans    &trans &ext_power EP_TOG
-	                                 &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans
+	&bt BT_CLR &bt BT_PRV &bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2                               &trans &trans &trans &trans  &trans &ext_power EP_OFF
+    &trans     &trans     &trans     &trans       &trans       &trans                                     &trans &trans &trans &trans  &trans &ext_power EP_ON
+    &trans     &trans     &trans     &trans       &trans       &trans &trans &trans         &trans &trans &trans &trans &trans &trans  &trans &ext_power EP_TOG
+	                                 &trans       &trans       &trans &trans &trans         &trans &trans &trans &trans &trans
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
