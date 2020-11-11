@@ -81,7 +81,7 @@
 /*(backslash)*/
 #define SE_BSLS RA(SE_PLUS)
 /*~*/
-#define SE_TILD RA(SE_DIAE)
+#define SE_TILD RA(RBKT)
 /*|*/
 #define SE_PIPE RA(SE_LABK)
 /*µ*/
