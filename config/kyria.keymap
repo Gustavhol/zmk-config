@@ -37,6 +37,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        hmi: homerow_mods_index {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods index";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
         hmp: homerow_mods_pinky {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods pinky";
