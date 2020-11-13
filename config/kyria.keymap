@@ -33,7 +33,15 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
             #binding-cells = <2>;
-            tapping_term_ms = <175>;
+            tapping_term_ms = <300>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hmp: homerow_mods_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods pinky";
+            #binding-cells = <2>;
+            tapping_term_ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -55,7 +63,7 @@
 //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
 	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_AA
-	&kp TAB  &hm LSFT A &hm LCTL S &hm LALT D &hm LGUI F &kp G                      &kp H &hm LGUI J  &hm LALT K &hm LCTL L  &hm LSFT SE_OE &kp SE_AE
+	&kp TAB  &hm LSFT A &hm LCTL S &hm LALT D &hm LGUI F &kp G                      &kp H &hm LGUI J  &hm LALT K &hm LCTL L  &hmp LSFT SE_OE &kp SE_AE
 	&kp LG(LC(A)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LS(CMMA) &kp DEL
 	              &none &none &none &kp BKSP &lt LOWER SPC            &lt RAISE RET  &mo RAISE  &mo NAV &none &mo ADJ
 			>;
@@ -90,9 +98,9 @@
 
 		nav_layer {
 			bindings = <
-	&trans     &trans     &trans     &trans       &trans       &trans                                     &kp HOME &kp PGDN &kp PGUP &kp END   &trans &ext_power EP_OFF
-    &trans     &trans     &trans     &trans       &trans       &trans                                     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &ext_power EP_ON
-    &trans     &trans     &trans     &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans   &trans    &trans &ext_power EP_TOG
+	&trans     &trans     &trans     &trans       &trans       &trans                                     &kp HOME &kp PGDN &kp PGUP &kp END   &trans &trans
+    &trans     &trans     &trans     &trans       &trans       &trans                                     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &trans
+    &trans     &trans     &trans     &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans   &trans    &trans &trans
 	                                 &trans       &trans       &trans &trans &trans         &trans &trans &trans   &trans   &trans
 			>;
 
