@@ -76,7 +76,7 @@
 	              &none &none &none &kp BKSP &lt LOWER SPC            &lt RAISE RET  &mo RAISE  &mo NAV &none &mo ADJ
 			>;
 
-			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
+			sensor-bindings = <&inc_dec_cp M_VOLD M_VOLU &inc_dec_kp PGDN PGUP>;
 		};
 
 
