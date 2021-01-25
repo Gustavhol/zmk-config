@@ -37,14 +37,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hmr: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
         hmi: homerow_mods_index {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods index";
@@ -79,7 +71,7 @@
 //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
 	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_AA
-	&kp TAB  &hmp LSFT A &hmr LCTL S &hm LALT D &hmi LGUI F &kp G                      &kp H &hmi LGUI J  &hm LALT K &hm LCTL L  &hmp LSFT SE_OE &kp SE_AE
+	&kp TAB  &hmi LSFT A &hmi LCTL S &hm LALT D &hmi LGUI F &kp G                      &kp H &hmi LGUI J  &hm LALT K &hm LCTL L  &hmp LSFT SE_OE &kp SE_AE
 	&kp LG(LC(A)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LS(CMMA) &kp DEL
 	              &none &none &none &kp BKSP &lt LOWER SPC            &lt RAISE RET  &mo RAISE  &mo NAV &none &mo ADJ
 			>;
