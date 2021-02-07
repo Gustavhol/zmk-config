@@ -73,7 +73,8 @@
 	&kp ESC  &kp Q &kp W &kp E &kp R &kp T                                            &kp Y &kp U  &kp I    &kp O   &kp P    &kp SE_AA
 	&kp TAB  &hmi LSFT A &hmi LCTL S &hm LALT D &hmi LGUI F &kp G                      &kp H &hmi LGUI J  &hm LALT K &hm LCTL L  &hmp LSFT SE_OE &kp SE_AE
 	&kp LG(LC(A)) &kp Z &kp X &kp C &kp V &kp B &lt LOWER BKSP &lt LOWER SPC         &lt RAISE RET  &lt RAISE RET &kp N &kp M  &kp COMMA &kp DOT &kp LS(CMMA) &kp DEL
-	              &none &none &none &kp BKSP &lt LOWER SPC            &lt RAISE RET  &mo RAISE  &mo NAV &none &mo ADJ
+	              &none &none &none &kp BKSP &lt LOWER SPC            &lt RAISE RET  &kp 1  &kp 2 &kp 3 &kp 4
+	              // &none &none &none &kp BKSP &lt LOWER SPC            &lt RAISE RET  &mo RAISE  &mo NAV &none &mo ADJ
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLD M_VOLU &inc_dec_kp PGDN PGUP>;
