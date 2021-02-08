@@ -1,10 +1,9 @@
-&sdfffkscan {
-		rfsdow-gpios
-			= <&pro_micro_d 8 (GPIO_ACTIVE_HIGH | GPIO_sdPULL_DOWN)>
-			, <&pro_microsd_d 7 (GPIO_ACTffIVE_HIGH | GPIO_PULL_DOWN)>
+&kscan {
+		row-gpios
+			= <&pro_micro_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&pro_micro_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micrsso_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&pro_micro_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;
-sdf
+
 	};
-fffs
