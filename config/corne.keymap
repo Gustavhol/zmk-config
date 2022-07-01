@@ -59,7 +59,7 @@
         combo_ae {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <21 22>;
-            bindings = <&caps_word>;
+            bindings = <&kp SE_AE>;
         };
     };
 };
