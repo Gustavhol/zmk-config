@@ -58,7 +58,7 @@
         combo_aa {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <9 10>;
-            bindings = <&caps_word>;
+            bindings = <&kp SE_AA>;
         };
         combo_ae {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
