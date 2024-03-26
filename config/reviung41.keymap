@@ -127,7 +127,7 @@
 	&kp ESC &kp Q       &kp W       &lt WS1 E  &lt WS2 R   &kp T               &kp Y         &kp U        &kp I      &kp O       &kp P           &kp SE_AA
 	&kp TAB &hmi LSFT A &hmi LCTL S &hm LALT D &hmi LGUI F &kp G               &kp H         &hmi LGUI J  &hm LALT K &hm LCTL L  &hmp LSFT SE_OE &kp SE_AE
 	&mo ADJ &lt ADJ Z   &kp X       &kp C      &kp V       &kp B               &kp N         &kp M        &kp COMMA  &kp DOT     &kp LS(CMMA)    &kp DEL
-	                                &kp BKSP    &lt LOWER SPC                  &lt RAISE RET &mo RAISE   
+	                                &lt LOWER BKSP    &lt LOWER SPC            &lt RAISE RET &lt RAISE RET &trans 
 			>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLD M_VOLU &inc_dec_kp PGDN PGUP>;
@@ -151,7 +151,7 @@
 	&trans        &kp SE_UNDS &kp SE_AMPR &kp SE_GRV  &kp SE_LCBR &kp SE_RCBR           &kp SE_LT   &kp SE_GT   &kp SE_EQL &kp SE_PLUS &trans      &trans
 	&trans        &kp SE_MINS &kp SE_QUOT &kp SE_DQUO &kp SE_LPRN &kp SE_RPRN           &kp SE_LBRC &kp SE_RBRC &kp SE_CLN &kp SE_SLSH &kp SE_AT   &trans
 	&kp LG(LC(M)) &kp SE_CIRC &kp SE_BSLS &kp SE_ASTR &kp SE_EXLM &kp SE_HASH           &kp SE_PIPE &kp SE_QUES &kp SE_DLR &kp SE_PERC &kp SE_TILD &kp RCTL
-	                                                  &trans      &mo NAV               &trans      &trans    &trans
+	                                                  &mo NAV     &trans                &trans      &trans    &trans
 		>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
@@ -163,7 +163,7 @@
     &trans     &trans     &trans     &trans       &trans       &trans                    &kp HOME &kp PGDN &kp PGUP &kp END   &trans &trans
     &trans     &trans     &trans     &trans       &trans       &trans                    &kp LEFT &kp DOWN &kp UP   &kp RIGHT &trans &trans
     &trans     &trans     &trans     &trans       &trans       &trans                    &trans   &trans   &trans   &trans    &trans &trans
-	                                          &trans       &trans                    &trans   &trans  	    &trans		>;
+	                                          &trans       &trans                    &trans   &trans   &trans		>;
 
 			sensor-bindings = <&inc_dec_cp M_VOLU M_VOLD &inc_dec_kp PGUP PGDN>;
 		};
